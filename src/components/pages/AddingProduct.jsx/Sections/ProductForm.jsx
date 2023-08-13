@@ -206,7 +206,7 @@ const ProductForm = () => {
                             Select Sub Category
                           </option>
                           {subCategories?.map((cat) => (
-                            <option key={cat.id} value={cat.title}>
+                            <option key={cat.id} value={cat.id}>
                               {cat.title}
                             </option>
                           ))}
