@@ -1,32 +1,17 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect } from "react";
 import Card from "../../../../UI/Card/Card";
-import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../../../../../config/firebase";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../../../../store/slices/products/productsFetching";
 
 const FeaturedProducts = ({ type }) => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const getData = async () => {
-      const colRef = collection(db, "products");
+    dispatch(getProducts());
+  }, [dispatch]);
 
-      try {
-        const q = query(colRef, where("product_type", "==", type));
-        const querySnapshot = await getDocs(q);
-        setProducts(
-          querySnapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-          }))
-        );
-      } catch (err) {
-        console.error("Error getting product:", err);
-      }
-    };
-    return () => {
-      getData();
-    };
-  }, [type]);
+  const products = useSelector((state) => state.products.products);
+  const filteredProducts = products.filter((pro) => pro.product_type === type);
 
   return (
     <Fragment>
@@ -48,7 +33,7 @@ const FeaturedProducts = ({ type }) => {
       </div>
       <div className="featured-bottom container">
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-          {products?.map((pro, nl) => (
+          {filteredProducts?.map((pro, nl) => (
             <Card product={pro} key={pro.id + nl} />
           ))}
         </div>
