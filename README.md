@@ -21,6 +21,7 @@
 ### Technologies
 
 - State management
+- Firebase
 - Redux-Toolkit
 - Redux-persist
 - React-router-dom
