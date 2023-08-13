@@ -31,3 +31,14 @@
 - Material UI
 - uuid
 - yup
+
+## How to run
+
+1 - Clone the repo by running (`git clone https://github.com/amrmahmoud20/Alphastore.git`)
+
+2 - Type `npm install` in the terminal
+
+3 - `cd` into the project folder
+
+4 - Type `npm run dev` and Enjoy
+
