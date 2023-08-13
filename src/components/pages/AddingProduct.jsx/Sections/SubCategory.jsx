@@ -26,6 +26,8 @@ const SubCategory = () => {
             <option value="hoddie">Hoddie</option>
             <option value="dress">Dress</option>
             <option value="shirt">Shirt</option>
+            <option value="jacket">Jacket</option>
+            <option value="pyjamas">Pyjamas</option>
           </select>
         </div>
         <button type="submit">New Sub-Category</button>

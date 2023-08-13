@@ -66,7 +66,7 @@ const NavBar = () => {
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"
+            aria-label="Toggle na vigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -148,6 +148,9 @@ const NavBar = () => {
               <li className="nav-item icons">
                 <FavoriteBorderIcon />
                 <SearchIcon />
+                <Link to="new-product">
+                  <i className="fa-solid fa-plus fa-lg"></i>
+                </Link>
                 <button
                   className="person"
                   type="button"

@@ -18,7 +18,7 @@ export const addNewSubCategory = createAsyncThunk(
   "sub-category/addNewSubCategory",
   async (title) => {
     try {
-      const colRef = doc(db, "sub-category", title);
+      const colRef = doc(db, "sub-category", uuidv4);
       await setDoc(colRef, { title });
       console.log("sub-category added successfully.");
     } catch (err) {

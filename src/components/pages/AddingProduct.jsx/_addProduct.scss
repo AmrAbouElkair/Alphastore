@@ -187,3 +187,10 @@ div.product__form {
     padding: 20px 40px;
   }
 }
+
+select {
+  text-transform: capitalize;
+  option {
+    text-transform: capitalize;
+  }
+}

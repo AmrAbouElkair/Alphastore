@@ -16,8 +16,8 @@ const Categories = () => {
   }, [dispatch]);
   const categories = useSelector((state) => state.products.categories);
 
-  const women = categories[0].id;
-  const men = categories[1].id;
+  const women = categories[0]?.id;
+  const men = categories[1]?.id;
   return (
     <Fragment>
       <div

@@ -113,7 +113,7 @@ const ProductForm = () => {
               </Link>
               <div className="product__modal__circle"></div>
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/fir-learnning-d99c3.appspot.com/o/images%2Fpexels-pixabay-264726.jpg?alt=media&token=3a3cee1d-189a-40a6-b7d4-9ea7070d0e4f"
+                src="https://firebasestorage.googleapis.com/v0/b/fir-learnning-d99c3.appspot.com/o/images%2Fpg1.jpg?alt=media&token=650fe679-2815-46bc-8934-56a3bfa41919"
                 className="product__modal__product"
               />
             </div>
@@ -197,7 +197,7 @@ const ProductForm = () => {
                         <select
                           name="sub-category"
                           id="sub-category"
-                          value={setSubCateg}
+                          value={sub_category}
                           onChange={(e) => setSubCateg(e.target.value)}
                           className="form-select"
                           aria-label="Default select example"
@@ -205,7 +205,7 @@ const ProductForm = () => {
                           <option value="Select the sub-category">
                             Select Sub Category
                           </option>
-                          {subCategories.map((cat) => (
+                          {subCategories?.map((cat) => (
                             <option key={cat.id} value={cat.title}>
                               {cat.title}
                             </option>
@@ -220,7 +220,7 @@ const ProductForm = () => {
                           required
                           name="category"
                           id="category"
-                          value={setCateg}
+                          value={category}
                           onChange={(e) => setCateg(e.target.value)}
                           className="form-select"
                           aria-label="Default select example"
