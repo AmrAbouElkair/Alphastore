@@ -36,9 +36,9 @@
 
 1 - Clone the repo by running (`git clone https://github.com/amrmahmoud20/Alphastore.git`)
 
-2 - Type `npm install` in the terminal
+2 - `cd` into the project folder
 
-3 - `cd` into the project folder
+3 - Type `npm install` in the terminal
 
 4 - Type `npm run dev` and Enjoy
 
