@@ -34,7 +34,7 @@
 
 ## How to run
 
-1 - Clone the repo by running (`git clone https://github.com/amrmahmoud20/Alphastore.git`)
+1 - Clone the repo by running (`https://github.com/AmrAbouElkair/Alphastore.git`)
 
 2 - `cd` into the project folder
 
